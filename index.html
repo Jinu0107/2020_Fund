@@ -4,76 +4,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/App.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="flex">
-        <header class="side_header">
+    <div class="main_container">
+        <div class="temp"></div>
+        <header class="flex flex_d flex_a_c">
             <div class="logo">
                 LOGO
             </div>
-            <div class="nav">
-                <div class="nav_item">메인페이지</div>
-                <div class="nav_item">펀드등록</div>
-                <div class="nav_item">펀드보기</div>
-                <div class="nav_item">투자자목록</div>
+            <div class="li_box flex flex_d flex_b">
+                <div data-target='0' class="fw_500 on">메인페이지</div>
+                <div data-target='1' class="fw_500">펀드등록</div>
+                <div data-target='2' class="fw_500">펀드보기</div>
+                <div data-target='3' class="fw_500">투자자목록</div>
             </div>
         </header>
-        <div class="page_container">
-            <div class="main_page">
+        <div class="section_container">
+            <div class="main_page section">
                 <div class="visual">
-                    <img src="images/main_banner_01.jpg" alt="">
-                    <div class="visual_text">
-                        <span class="flex">
-                            <p>KICK STARTER </p>
-                            <hr>
-                        </span>
-                        <div>
-                            과정이 보이고 수익이 보인다 <Br>
-                            <span class="bold">킥스타터 펀드</span>
+                    <img src="images/2.jpg" alt="" style="filter: brightness(80%);">
+                    <img src="images/main_banner_01.jpg" class="on" alt="">
+                    <div class="text">
+                        <span class="color_fff font_13 flex flex_a_c" style="margin-bottom: 30px;">KICK STARTER
+                            <hr style="height: 1px; width: 80px; margin-left: 10px; background: #fff;"></span>
+                        <div></div>
+                        <div class="color_fff fw_300" style="font-size: 52px;">
+                            과정이 보이고 수익이 보인다 <br>
+                            <span class="fw_600">킥스타터 펀드</span>
                         </div>
                     </div>
                 </div>
-                <div class="fund_section">
-                    <div class="fund_ab_box">
-                        <div class="top fund_box">
-                            <div class="item">
-                                <img src="images/handshake.jpg" alt="">
-                                <div class="ab flex flex_d flex_a_c wh100">
-                                    <span>진행중인 투자</span>
-                                    <div>킥스타터에서</div>
-                                    <div>핫한 프로젝트들을 만나보세요</div>
-                                    <p>자세히 보기</p>
-                                    <hr>
-                                </div>
+                <div class="fund">
+                    <div class="flex">
+                        <div class="item item0" style="z-index: 3;">
+                            <img src="images/handshake.jpg" alt="">
+                            <div class="text  flex flex_d flex_c">
+                                <span class="color_fff font_22 fw_400 m_b_20">진행중인 투자</span>
+                                <div class="color_fffa font_15">킥스타터펀드 에서</div>
+                                <div class="color_fffa font_15">핫한 프로젝트 들을 만나보세요</div>
+                                <div class="color_fff font-17 m_t_50">자세히 보기</div>
+                                <hr style="width: 100px; height: 1px; background-color: #fff;;">
                             </div>
                         </div>
-                        <div class="bottom fund_box"></div>
+                        <div class="item item1 bg_fff">
+                            <div class="text flex flex_d p_h_30 p_v_40">
+                                <div class="font_19 fw_600 color_333 flex flex_b m_b_50">
+                                    Latest News <p>+</p>
+                                </div>
+                                <div class="font_15 color_000">킥스타터에서 인원을 채용합니다...</div>
+                                <div class="font_14 color_777">킥스타터에서 인원을 채용합니다..</div>
+                                <hr>
+                                <div class="font_15 color_000">새롭게 홈페이지를 오픈했습니다...</div>
+                                <div class="font_14 color_777">저희 Kick Starter의 양질의...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_box flex">
+                        <div class="item item2 bg_blue p_h_40 p_v_50">
+                            <div class="percent color_fffa font_21 m_b_90">70.32%</div>
+                            <div class="color_fff font_17 fw_400 m_b_20">환경 친화적인 비닐개발</div>
+                            <div class="font_13 color_fffa">종료일 - 2019-07-05 17:00:30</div>
+                            <div class="font_13 color_fffa">5,000원 펀딩</div>
+
+                        </div>
+                        <div class="item item3 bg_dark  p_h_40 p_v_50" style="z-index: 5;">
+                            <div class="percent color_fffa font_21 m_b_90">70.32%</div>
+                            <div class="color_fff font_17 fw_400 m_b_20">환경 친화적인 비닐개발</div>
+                            <div class="font_13 color_fffa">종료일 - 2019-07-05 17:00:30</div>
+                            <div class="font_13 color_fffa">5,000원 펀딩</div>
+                        </div>
+                        <div class="item item4 bg_yellow  p_h_40 p_v_50">
+                            <div class="percent color_fffa font_21 m_b_90">70.32%</div>
+                            <div class="color_fff font_17 fw_400 m_b_20">환경 친화적인 비닐개발</div>
+                            <div class="font_13 color_fffa">종료일 - 2019-07-05 17:00:30</div>
+                            <div class="font_13 color_fffa">5,000원 펀딩</div>
+                        </div>
+                        <div class="item item5 bg_f7  p_h_40 p_v_50">
+                            <div class="percent color_777 font_21 m_b_90">70.32%</div>
+                            <div class="color_333 font_17 fw_500 m_b_20">환경 친화적인 비닐개발</div>
+                            <div class="font_13 color_777">종료일 - 2019-07-05 17:00:30</div>
+                            <div class="font_13 color_777">5,000원 펀딩</div>
+                        </div>
                     </div>
                 </div>
+                <footer class="p_h_50 p_v_40">
+                    <div class="font_13 color_000 fw_500">킥스타터 - 펀드 홈페이지</div>
+                    <p class="color_777 font_13 m_t_20">
+                        Tel) 031-778-2300<br>
+                        우) 13587 경기 성남시 분당구 불정로386번길 35 양영디지털고등학교<br>
+                        Copyright Gondr Allright reserved. Since 2017-03-01<br>
+                    </p>
+                </footer>
+            </div>
+            <div class="fund_register_page section">
+
+            </div>
+            <div class="text section">
+                
             </div>
         </div>
-        <div class="side_bar">
-            <div class="main flex flex_d flex_c font_15">
-                BLOG
-                <div class="hover_item flex flex_c">
-                    &gt;
-                </div>
+        <div></div>
+        <div class="side bg_dark">
+            <div class="main flex flex_d flex_c">
+                <p class="color_fff font_14">BLOG</p>
             </div>
-            <div class="sub font_12 flex flex_c">
-                갤러리
+            <div class="sub bg_dark flex flex_c">
+                <p class="color_fff font_13">도움말</p>
             </div>
-            <div class="sub font_12 flex flex_c">
-                공지사항
+            <div class="sub bg_dark flex flex_c">
+                <p class="color_fff font_13">갤러리</p>
             </div>
-            <div class="sub font_12 flex flex_c">
-                오시는길
+            <div class="sub bg_dark flex flex_c">
+                <p class="color_fff font_13">오시는길</p>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
