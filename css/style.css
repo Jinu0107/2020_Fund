@@ -58,6 +58,10 @@ body::-webkit-scrollbar {
     justify-content: center;
 }
 
+.flex_e {
+    justify-content: flex-end;
+}
+
 .flex_d {
     flex-direction: column;
 }
@@ -188,6 +192,10 @@ body::-webkit-scrollbar {
 
 .color_777 {
     color: #777;
+}
+
+.color_aaa {
+    color: #aaa;
 }
 
 .color_blue {
@@ -493,6 +501,7 @@ header .li_box>div:hover {
 /* 푸터시작 */
 
 footer {
+    border-top: 1px solid #e7e7e7;
     width: 100%;
     height: 180px;
     background-color: #f7f7f7;
@@ -537,8 +546,10 @@ footer {
 }
 
 .section_container .section {
+    width: 100%;
     min-height: 100vh;
     position: absolute;
+    display: none;
 }
 
 /* 섹션 컨테이너 끝 */
@@ -633,8 +644,165 @@ footer {
 
 .fund_register_page {
     background-color: #fff;
+}
+
+.fund_container {
     width: 100%;
-    height: 500px;
+    height: 100vh;
+}
+
+.fund_register_page .input_form {
+    width: 50%;
+    height: 550px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 4px 5px 10px 3px #0002;
+    overflow: hidden;
+}
+
+.fund_register_page .main_box {
+    padding: 40px 100px;
+    width: 95%;
+    height: 100%;
+}
+
+.fund_register_page .side_box {
+    width: 5%;
+    height: 100%;
+}
+
+.fund_register_page .fund_num {
+    font-size: 30px;
+}
+
+.fund_register_page .input_group {
+    margin: 20px 0;
+}
+
+.fund_register_page input {
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 10px 0;
+    transition: .3s;
+}
+
+.fund_register_page input::-webkit-input-placeholder {
+    font-size: 16px;
+}
+
+.fund_register_page input:focus {
+    border-bottom: 1px solid #1588a9;
+    padding: 15px 0;
+}
+
+.fund_register_page .submit_btn {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    width: 100%;
+    height: 50px;
+    background-color: #1588a9;
+    cursor: pointer;
+}
+
+.fund_register_page .submit_btn:hover {
+    filter: brightness(110%);
 }
 
 /* 펀드등록 끝  */
+
+/* 펀드 리스트 시작 */
+
+.view_fund_page {
+    width: 100%;
+    background-color: #fff;
+}
+
+.view_fund_page .view_container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.view_fund_page .section_title {
+    margin-top: 30px;
+    padding: 0 30px;
+}
+
+.view_fund_page .item_box {
+    padding: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+}
+
+.view_fund_page .item_box .item {
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.view_fund_page .item>img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.view_fund_page .item .name {
+    margin-top: 10px;
+    font-weight: 600;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.view_fund_page .item .percent {
+    color: #1588a9;
+    font-weight: 600;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.view_fund_page .item .percent>span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.view_fund_page .item>div {
+    padding: 0 5px;
+}
+
+.view_fund_page .item .bar {
+    border-radius: 5px;
+    margin-top: 12px;
+    height: 5px;
+    width: 0;
+    background-color: #1588a9;
+}
+
+.view_fund_page .item .status_btn {
+    width: 90px;
+    height: 25px;
+    background-color: #1588a9;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+.view_fund_page .item .status_btn.on {
+    cursor: pointer;
+}
+
+.view_fund_page .item .status_btn.on:hover {
+    filter: brightness(110%);
+}
+
+/* 펀드 리스트 끝 */
