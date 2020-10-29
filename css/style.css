@@ -447,7 +447,15 @@ body::-webkit-scrollbar {
     padding-right: 100px;
 }
 
+.text_over {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
 /* 기본설정 끝 */
+
 
 /* 메인 시작 */
 
@@ -459,7 +467,9 @@ body::-webkit-scrollbar {
     grid-template-columns: 250px calc(100vw - 330px) 80px;
 }
 
+
 /* 메인 끝 */
+
 
 /* 헤더 시작 */
 
@@ -496,7 +506,9 @@ header .li_box>div:hover {
     padding-left: 10px;
 }
 
+
 /* 헤더 끝 */
+
 
 /* 푸터시작 */
 
@@ -507,7 +519,9 @@ footer {
     background-color: #f7f7f7;
 }
 
+
 /* 푸터끝 */
+
 
 /* 사이드바 시작 */
 
@@ -536,7 +550,9 @@ footer {
     background-color: #fff1;
 }
 
+
 /* 사이드바 끝 */
+
 
 /* 섹션 컨테이너 시작 */
 
@@ -552,7 +568,9 @@ footer {
     display: none;
 }
 
+
 /* 섹션 컨테이너 끝 */
+
 
 /* 메인페이지 시작 */
 
@@ -606,6 +624,12 @@ footer {
     cursor: pointer;
 }
 
+.main_page .item .fund_name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .main_page .item * {
     transition: .5s;
 }
@@ -638,7 +662,9 @@ footer {
     color: #000;
 }
 
+
 /* 메인페이지 끝 */
+
 
 /* 펀드등록 시작  */
 
@@ -713,7 +739,9 @@ footer {
     filter: brightness(110%);
 }
 
+
 /* 펀드등록 끝  */
+
 
 /* 펀드 리스트 시작 */
 
@@ -728,7 +756,7 @@ footer {
 }
 
 .view_fund_page .section_title {
-    margin-top: 30px;
+    margin-top: 50px;
     padding: 0 30px;
 }
 
@@ -742,8 +770,9 @@ footer {
 }
 
 .view_fund_page .item_box .item {
+    position: relative;
     width: 100%;
-    height: 400px;
+    height: auto;
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
@@ -752,6 +781,18 @@ footer {
 .view_fund_page .item>img {
     width: 100%;
     border-radius: 5px;
+}
+
+.view_fund_page .item .number {
+    left: 0;
+    z-index: 10;
+    position: absolute;
+    background-color: #1588a9;
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    padding: 3px 7px;
+    border-radius: 3px;
 }
 
 .view_fund_page .item .name {
@@ -805,4 +846,180 @@ footer {
     filter: brightness(110%);
 }
 
+
 /* 펀드 리스트 끝 */
+
+
+/* 팝업 */
+
+.popup {
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0007;
+}
+
+.popup .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 800px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 4px 5px 10px 3px #0002;
+    overflow: hidden;
+}
+
+.popup .main_box {
+    padding: 40px 100px;
+    width: 95%;
+    height: 100%;
+}
+
+.popup .side_box {
+    width: 5%;
+    padding: 10px 0;
+    text-align: center;
+    height: 100%;
+}
+
+.popup .side_box>i {
+    color: #fff;
+    cursor: pointer;
+}
+
+.popup .investment_num {
+    font-size: 30px;
+}
+
+.popup .input_group {
+    margin: 20px 0;
+}
+
+.popup input {
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 10px 0;
+    transition: .3s;
+}
+
+.popup input::-webkit-input-placeholder {
+    font-size: 16px;
+}
+
+.popup input:focus {
+    border-bottom: 1px solid #1588a9;
+    padding: 15px 0;
+}
+
+.popup .investment_btn {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    width: 100%;
+    height: 50px;
+    background-color: #1588a9;
+    cursor: pointer;
+}
+
+.popup .investment_btn:hover {
+    filter: brightness(110%);
+}
+
+
+/* 팝업 끝 */
+
+
+/* 투자자목록 시작  */
+
+.investor_list_page .investor_container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.investor_list_page .section_title {
+    margin-top: 80px;
+}
+
+.investor_list_page .table {
+    margin-top: 90px;
+    table-layout: fixed;
+    border-bottom: 1px solid #7773;
+}
+
+.investor_list_page .table tbody {
+    overflow: hidden;
+}
+
+.investor_list_page .table th,
+.investor_list_page .table td {
+    position: relative;
+    text-align: center;
+}
+
+.investor_list_page .table td {
+    padding: 20px;
+}
+
+.investor_list_page .pagination_group {
+    width: 100%;
+    height: 30px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.investor_list_page .pagination_group>div {
+    margin: 0 15px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    transition: .5s;
+}
+
+.investor_list_page .load_img_btn {
+    background-color: #1588a9;
+    color: #fff;
+    padding: 5px 9px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.investor_list_page .load_img_btn:hover {
+    filter: brightness(110%);
+}
+
+.investor_list_page .pagination_group>div:hover {
+    color: #1588a9;
+}
+
+.investor_list_page .pagination_group>div.active {
+    color: #1588a9;
+}
+
+.investor_list_page .pagination_group>div.disable {
+    cursor: default;
+    color: #999;
+}
+
+.investor_list_page .pagination_group>div.disable:hover {
+    color: #999;
+}
+
+.investor_list_page footer {
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* 투자자목록 끝 */
